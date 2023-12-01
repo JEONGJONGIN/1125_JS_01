@@ -30,14 +30,6 @@
     
         // 클릭한 위치에 Infobox를 추가합니다.
         map.infobox(clickLocation.latitude, clickLocation.longitude, "おすすめスポット", "私のお気に入りの場所です");
- 
-        for (let i = 0; i < 5; i++) { // 예시로 5개의 핀 생성
-          const randomLat = lat + (Math.random() - 0.5) * 0.1; // 임의의 위도 생성
-          const randomLon = lon + (Math.random() - 0.5) * 0.1; // 임의의 경도 생성
-  
-          const pin = map.pin(randomLat, randomLon, "blue");
-          pins.push(pin); // 생성된 핀을 배열에 추가
-        };
       });
       // 私のお気に入りの場所です = firebaseに登録された文字が入ったらどうなるでしょう？？
       map.infobox(lat, lon, "おすすめスポット", "私のお気に入りの場所です");
